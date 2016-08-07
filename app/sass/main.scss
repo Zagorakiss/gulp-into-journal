@@ -1,0 +1,580 @@
+@import '_part-1.scss';	
+
+
+// Variables /////////////////////////////////////////////////////////////////////////////////////
+
+$museo: 'MuseoCyrl-500';
+$helveticaNbold: 'HelveticaNeueBoldCondensed';
+$helveticaNthin: 'HelveticaNeueCyr-Thin';
+$helvetica: 'Helvetica';
+$arial: 'Arial';
+
+
+// Colors //
+$white: #fff;
+$black: #000;
+$green: #4eb96f; 
+$blue:  #00adee; 
+$red:   #f26b69; 
+$gray:  #bdc3c7; 
+$orange: #ffba00;
+
+// Mixins
+@mixin overlay($color) { // Примесь для синего оверлея
+  &:before {content: ''; width: 100%; height: 100%; position: absolute; left: 0; top: 0; opacity: 1; background: $color; }
+}
+
+
+@font-face {
+  font-family: 'MuseoCyrl-500';
+  src: url('/fonts/MuseoCyrl-500.eot');
+  src: url('/fonts/MuseoCyrl-500.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/MuseoCyrl-500.woff2') format('woff2'),
+       url('/fonts/MuseoCyrl-500.woff') format('woff'),
+       url('/fonts/MuseoCyrl-500.ttf') format('truetype'),
+       url('/fonts/MuseoCyrl-500.svg#MuseoCyrl-500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Thin';
+  src: url('/fonts/HelveticaNeueCyr-Thin.eot');
+  src: url('/fonts/HelveticaNeueCyr-Thin.woff2') format('woff2'),
+       url('/fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+       url('/fonts/HelveticaNeueCyr-Thin.ttf') format('truetype'),
+       url('/fonts/HelveticaNeueCyr-Thin.svg#HelveticaNeueCyr-Thin') format('svg'),
+       url('/fonts/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueBoldCondensed';
+  src: url('/fonts/HelveticaNeueBoldCondensed.woff') format('woff'),
+       url('/fonts/HelveticaNeueBoldCondensed.ttf') format('truetype'),
+       url('/fonts/HelveticaNeueBoldCondensed.svg#HelveticaNeueBoldCondensed') format('svg'),
+       url('/fonts/HelveticaNeueCondensedBold.eot'),
+       url('/fonts/HelveticaNeueCondensedBold.woff2') format('woff2'),
+       url('/fonts/HelveticaNeueCondensedBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////// Journal ///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////
+///////// Temp //////////
+.layout { width: 100%; height: 100%; overflow: visible;
+	&1 {background:transparent url('/img/layouts/1-1.png') 0 0 no-repeat;}
+	&2 {background:transparent url('/img/layouts/1-2.png') 0 0 no-repeat;}
+	&3 {background:transparent url('/img/layouts/2-1.png') 0 0 no-repeat;}
+	&4 {background:transparent url('/img/layouts/2-2.png') 0 0 no-repeat;}
+	&5 {background:transparent url('/img/layouts/3-1.png') 0 0 no-repeat;}
+	&6 {background:transparent url('/img/layouts/3-2.png') 0 0 no-repeat;}
+	&7 {background:transparent url('/img/layouts/4-1.png') 0 0 no-repeat;}
+	&8 {background:transparent url('/img/layouts/4-2.png') 0 0 no-repeat;}
+	&9 {background:transparent url('/img/layouts/5-1-2.png') 0 0 no-repeat;}
+	&10 {background:transparent url('/img/layouts/6-1.png') 0 0 no-repeat;}
+	&11 {background:transparent url('/img/layouts/6-2.png') 0 0 no-repeat;}
+	&12 {background:transparent url('/img/layouts/7-1.png') 0 0 no-repeat;}
+	&13 {background:transparent url('/img/layouts/7-2.png') 0 0 no-repeat;}
+	&14 {background:transparent url('/img/layouts/8-1.png') 0 0 no-repeat;}
+	&15 {background:transparent url('/img/layouts/8-2.png') 0 0 no-repeat;}
+	&16 {background:transparent url('/img/layouts/9-1.png') 0 0 no-repeat;}
+	&17 {background:transparent url('/img/layouts/9-2.png') 0 0 no-repeat;}
+	&18 {background:transparent url('/img/layouts/10-1.png') 0 0 no-repeat;}
+	&19 {background:transparent url('/img/layouts/10-2.png') 0 0 no-repeat;}
+	&20 {background:transparent url('/img/layouts/11-1.png') 0 0 no-repeat;}
+	&21 {background:transparent url('/img/layouts/11-2.png') 0 0 no-repeat;}
+}
+/////////////////////////
+/////////////////////////
+
+
+
+// BookBlock ///////////////////////////////////////////////////////////////////////////////////////////////
+.bb-custom-wrapper>nav a {
+	background: $gray;
+}
+.bb-custom-side {
+	// overflow-y: scroll;
+	// border: 1px solid $gray;
+}
+.bb-custom-wrapper>nav {
+	width: 90.6%;
+	// width: 100%;
+
+}
+.bb-custom-side {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: block;
+	padding: 10px 20px;
+	// margin-right: -1px;
+	// width: calc('50%-5px');
+// 	align-items: top;
+// 	justify-content: left;
+}
+.bb-custom-wrapper {
+	height: 115%;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+// Indi Styles ////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Text Elements /////////////////
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $helveticaNthin;
+	font-size: 12px;
+	color: $black;
+	line-height: 1;
+
+	p {line-height: 1.5;}
+}
+
+h1 {
+	font-family: $helveticaNbold;
+	font-size: 28px;
+	display: block;
+	position: relative;
+	margin: 10px 0;
+}
+
+.title1 {
+	@extend h1;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		border-top: 1px solid $blue;
+		width: 46px;
+		bottom: -8px;
+	}
+}
+
+.subtitle {
+	font-size: 22px;
+}
+
+.title1_museo {font-family: $museo; font-size: 34px; font-weight: normal; margin-top: 40px; margin-bottom: 20px;}
+
+.title2 {
+	font-family: $helveticaNbold;
+	font-size: 18px;
+	display: block;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		border-top: 1px solid $blue;
+		width: 46px;
+		bottom: -8px;
+	}
+}
+
+h2 {
+	&.subtitle2 {font-family: $helvetica; font-size: 20px; z-index: 5; font-weight: 600;}
+}
+
+h3, .title3 {
+	font-family: $helvetica;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.4;
+	margin: 5px 0;
+	&.title_bold {font-family: $helveticaNbold; font-size: 16px; margin-bottom: 0;}
+}
+
+
+
+.subtitle3 {
+	@extend .title3;
+	font-size: 12px;
+}
+
+.marginTop25 {
+	    margin-top: 25px;
+}
+
+.text {
+	font-family: $helveticaNthin;
+	font-size: 12px;
+	color: $black;
+	line-height: 1.2;
+	p {line-height: 1.5;}
+}
+.links {
+	font: italic 12px "Helvetica";
+}
+
+.property {
+	font-family: $helvetica;
+	font-size: 12px;
+
+}
+//////////////////////////////
+
+
+
+// Images ////////////////////
+.img {
+	&1 {
+		height: 120px;
+		display: inline-block;
+		margin: 10px 20px 10px 0px;
+		float: left;
+	}
+	&2 {width: 100%; margin-top: 15px; margin-bottom: 25px;}
+	&3 {width: 100%; margin-top: 15px; margin-bottom: 0px;}
+	&4 {width: 100%; margin-top: 15px; margin-bottom: 45px;}
+	&5 {margin-bottom: 15px;}
+	&7 {margin-bottom: 15px;}
+	&8 {margin-bottom: 25px;}
+	&9 {width: 100%; margin-bottom: 15px;}
+	&10 {margin-bottom: 10px;}
+	&12 {margin-left: 5%; margin-top: 20px;}
+	&13 {margin-top: 60px;}
+
+}
+//////////////////////////////
+
+
+
+// Columns (Stakes) ///////////
+.stake {display: inline-block; vertical-align: top;
+	&_small {width: 200px;}
+	&_big {width: 300px;}
+	&_1-left {
+		margin-left: 15px;
+	    margin-top: 16px;
+	    margin-right: 0;
+	}
+	&_1-right {
+		margin-left: 24px;
+	    margin-top: 16px;
+	    margin-right: 0;
+	    vertical-align: top;
+	}
+	&_2-left {
+		margin-top: 16px;
+	}
+	&_2-right {
+		margin-top: 25px;
+		margin-left: 30px;
+	}
+	&_3-left {
+		margin-left: 30px;
+		margin-top: 20px;
+		h3 {margin-bottom: 10px;}
+		.text {margin-bottom: 20px;}
+	}
+	&_3-right {
+		margin-top: 20px;
+		margin-left: 30px;
+		h3 {margin-bottom: 10px;}
+		.text {margin-bottom: 20px;}
+	}
+	&_4-left {
+		width: 220px
+	}
+	&_4-right {
+		margin-top: 15px;
+		margin-left: 30px;
+	}
+	&_5-left {}
+	&_5-right {
+		margin-left: 54px;
+	}
+	&_6-left {}
+	&_6-right {
+		margin-left: 10px;
+	}
+	&_third {width: 26%; margin-left: 5%;}
+}
+
+
+
+
+// Excludes ///////////////////
+.childhood {
+	.title1:after {bottom: -3px;}
+}
+
+.sea-tatoo {
+	position: relative;
+	width: 48%;
+	margin-left: 2%;
+	background: transparent url('/img/journal/holdfast.png') 0 0 no-repeat;
+	@include overlay(rgba(darken($gray, 50%), 0.5));
+	text-align: center;
+	* {color: $white;}
+	h2 {position: relative;}
+	.text {position: relative; font-size: 14px; font-family: $helvetica; margin-bottom: 20px; line-height: 1.3;
+		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 14px;}
+	}
+	.stake {text-align: left; width: 44%;}
+	&__intro {text-align: left; width: 90%; display: inline-block; font-style: italic; margin-bottom: 20px;
+		.text {font-family: $helveticaNthin;}
+	}
+	&__line {display: inline-block; position: relative; width: 90px; height: 1px; background: $white; margin: 30px 0 20px 0;}
+}
+
+.tatoos {
+	.text {font-family: $helveticaNthin; font-size: 16px; margin-bottom: 20px;
+		i {font-size: 16px;}
+	}
+}
+
+.tatoos2 {
+	@extend .tatoos;
+	.stake {
+		&:nth-child(2) {margin-top: 40px;}
+		&:nth-child(3) {margin-top: 80px;}
+	}
+}
+
+.sea {
+	background:transparent url('/img/journal/sea.png') left top no-repeat;
+	@include overlay(rgba($gray, 0.1));
+	&__container {width: 40%; text-align: center; margin: 10px 10px 10px 30px;}
+	&__title { display: inline-block; text-align: center;
+		h1 {font-family: $helveticaNthin; font-size: 34px; font-weight: normal;}
+		h2 {font-family: $helveticaNthin; font-size: 30px; font-weight: normal;}
+	}
+	&__text { display: inline-block; margin: 20px 0 0 20px;
+		font-family: $helveticaNthin;
+		font-size: 14px;
+		line-height: 1.2;
+		text-align: left;
+	}
+}
+
+.brusov {
+	padding: 40px;
+	&__intro {
+		font: italic 12px $helvetica;
+		width: 55%;
+		margin: 20px 0 20px 0;
+	}
+	.stake {
+		width: 65%;
+		margin-left: 35%;
+		margin-top: 15px;
+	}
+	.text {
+		font-size: 14px;
+		text-align: justify;
+	}
+	.link-wrapper {margin-top: 20px;}
+	.link, .link>a {font: italic 14px $helvetica;}
+	.link_desc {font-style: normal;}
+}
+
+.windserf {
+	position: relative;
+	padding: 20px 50px;
+	background:transparent url('/img/journal/windserf.png') left top no-repeat;
+	@include overlay(rgba(lighten($gray, 80%), 0.7));
+	&__intro {
+		position: relative;
+		@extend .brusov__intro;
+		width: 45%;
+	}
+	.stake {
+		position: relative;
+		margin-top: 15px;
+		width: 70%;
+	}
+	.text {
+		position: relative;
+		font: 14px $helvetica;
+		margin-bottom: 15px;
+	}
+	&__outro {
+		position: relative;
+		@extend .windserf__intro;
+		width: 100%;
+	}
+}
+
+.tushino {
+	.title2 {font-size: 22px; margin-bottom: 25px;}
+	&_left {
+		.stake {display: inline-block; width: calc(100% - 200px); padding: 25px 0 0 20px;}
+
+	}
+	&_right {
+		.stake {display: inline-block; width: 40%; padding: 25px 0 0 15px;}
+		.title3 {
+			position: relative;
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				border-top: 1px solid $blue;
+				width: 26px;
+				bottom: -4px;
+				margin-bottom: 4px;
+			}	
+		}
+	}
+	&__pic-left {
+		height: 100%;
+		width: 200px;
+		float: left;
+		display: inline-block;
+		background:transparent url('/img/journal/water.png') left top no-repeat;
+		position: relative;
+		@include overlay(rgba(lighten($blue, 80%), 0.7));
+	}
+	&__pic-right {
+		height: 100%;
+		width: 80px;
+		float: right;
+		display: inline-block;
+		position: relative;
+		@include overlay(rgba(darken($blue, 30%), 0.2));
+	}
+
+	.text {
+		font: 14px $helveticaNthin;
+		margin-bottom: 15px;
+	}
+}
+
+.singlet {
+	position: relative;
+	@include overlay(rgba(darken($blue, 30%), 0.2));
+	padding: 10px 35px;
+	.stake {
+		position: relative;
+		width: 45%;
+		margin-top: 10px;
+		margin-right: 4%;
+	}
+	.text {
+		position: relative;
+		font: 15px $helveticaNthin;
+		margin-bottom: 15px;
+		b {font: bold 15px $helveticaNthin;}
+	}
+}
+
+.singlet2 {
+	position: relative;
+	@include overlay(rgba(darken($blue, 30%), 0.2));
+	padding: 10px 0 0 25px;
+}
+
+.captain {
+	text-align: center;
+	padding: 20px 50px;
+	h1 {
+		font: bold 25px $helvetica;
+	}
+	.title2 {
+		font-size: 20px;
+		margin-bottom: 10px;
+		&:after {bottom: -3px;}
+	}
+	&__intro {
+		text-align: left;
+		font: italic 12px $helvetica;
+		width: 70%;
+		margin: 40px 0 40px 90px;
+	}
+	.stake {
+		width: 35%;
+		text-align: left;
+		margin-left: 20px;
+		&:nth-child(1) {margin-left: 15%;}
+	}
+	.text {font-size: 13px; margin-bottom: 10px;}
+
+}
+
+.captain2 {
+	padding: 30px 10px;
+	.stake {
+		width: 30%;
+		margin-right: 2%;
+	}
+	.text {
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+
+}
+
+.schools {
+	position: relative;
+	background:transparent url('/img/journal/port.png') left top no-repeat;
+	padding: 20px 40px;
+	h3 {color: $white; font-weight: normal;}
+	.link, .link>a {color: lighten($blue, 20%); font: italic 10px $helvetica; margin-bottom: 30px;}
+}
+
+.self {
+	position: relative;
+	figure {display: inline-block; position: absolute; top: 10px; left: 10px;}
+	figcaption {
+		font: normal 10px $helvetica;
+		margin: 10px 22px;
+		line-height: 1.5;
+		b {font: bold 10px $helvetica;}
+	}
+	&__intro {
+		text-align: left;
+		font: italic 12px $helvetica;
+		width: 85%;
+	}
+	.title2 {margin-bottom: 90px; font-size: 22px; font-style: normal;} 
+	h3 {position: relative; font-size: 18px;}
+	.subtitle {font-size: 20px;}
+	.stake {
+		&:nth-child(1) {margin-left: 220px; margin-top: 5px; margin-bottom: 80px;}
+		&:nth-child(2) {width: 40%; margin-right: 50px;}
+		&:nth-child(3) {width: 40%; margin-top: 10px;}
+	}
+	.text {font-size: 13px;}
+
+}
+
+.self2 {
+	padding-left: 60px;
+	position: relative;
+	@include overlay(rgba($gray, 0.04));
+	.stake {width: 45%;
+		&:nth-child(2) {margin-left: 20px;}
+	}
+	.help-text {font: italic 12px $helvetica; margin-bottom: 40px;}
+	.title3 {position: relative; font-size: 18px;}
+	.subtitle {font-size: 20px;}
+	ol {margin-left: 20px;}
+	li {margin: 4px 0; padding-left: 10px;}
+	.text {margin-bottom: 30px; font-size: 13px;}
+}
+
+.self3 {
+	@extend .self2;
+	li {font-size: 10px;}
+}

@@ -1,0 +1,88 @@
+// Variables /////////////////////////////////////////////////////////////////////////////////////
+
+$museo: 'MuseoCyrl-500';
+$helveticaNbold: 'HelveticaNeueBoldCondensed';
+$helveticaNthin: 'HelveticaNeueCyr-Thin';
+$helvetica: 'Helvetica';
+$arial: 'Arial';
+
+// Colors //
+$white: #fff;
+$black: #000;
+$green: #4eb96f; 
+$blue:  #00adee; 
+$red:   #f26b69; 
+$gray:  #bdc3c7; 
+$orange: #ffba00;
+
+
+
+.container_journal-intro {
+	background:transparent url('../img/intro/fon.png') left top no-repeat;
+	background-size: 100% 100%;
+	margin: 0;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+
+	.journal-logo {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		display: inline-block;
+		text-align: center;
+		padding: 8px 44px;
+		font: normal 16px $museo;
+		border: 1px solid $white;
+	}
+
+	.button {
+		font: normal 14px $helvetica;
+		display: inline-block;
+		padding: 10px 15px;
+		width: 130px;
+		border: 1px solid $white;
+		color: $white;
+		background-color: transparent;
+		transition: all .2s ease;
+		border-radius: 2px;
+		&:hover {background-color: $white; color: $black;}
+	}
+
+	.intro {
+		margin: 40px 10px;
+		&__title {
+			font: normal 28px $helveticaNthin;
+			margin-bottom: 40px;
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				border-top: 1px solid $blue;
+				width: 32px;
+				bottom: 0px;
+			}
+		}
+		&__list {}
+		&__item {display: block; margin: 24px 0;}
+		.link {
+			display: inline-block;
+			color: $black;
+			font: bold 16px $helvetica;
+			text-decoration: none;
+			border-bottom: 2px solid $black;
+			line-height: .7;
+			transition: all .2s ease;
+			&:hover {color: $blue; border-bottom: 2px solid $blue;}
+		}
+		.page-numbers {
+			display: inline-block;
+			color: $black;
+			font: normal 16px $helveticaNthin;
+			margin-left: 4px;
+		}
+		&__buttons-list {display: block; margin-top: 200px; text-align: center;}
+		&__buttons-item {display: inline-block; margin: 3px;}
+
+	}
+}

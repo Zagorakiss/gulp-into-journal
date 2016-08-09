@@ -1,3 +1,4 @@
+// BookBlock ////////////////////////////////////////////////////////////////////////////////
 var Page = (function() {
 	
 	var config = {
@@ -79,3 +80,16 @@ var Page = (function() {
 
 
 Page.init();
+// BookBlock END ////////////////////////////////////////////////////////////////////////////////
+
+
+
+$(document).ready(function(){
+	if (window.location.href.indexOf("#1") !== -1) {$( '#bb-bookblock' ).bookblock( 'jump', 1 );}
+	if (window.location.href.indexOf("#2") !== -1) {$( '#bb-bookblock' ).bookblock( 'jump', 3 );}
+	if (window.location.href.indexOf("#3") !== -1) {$( '#bb-bookblock' ).bookblock( 'jump', 5 );}
+	if (window.location.href.indexOf("#4") !== -1) {$( '#bb-bookblock' ).bookblock( 'jump', 8 );}
+	if (window.location.href.indexOf("#5") !== -1) {$( '#bb-bookblock' ).bookblock( 'jump', 9 );}
+	if (window.location.href.indexOf("#6") !== -1) {$( '#bb-bookblock' ).bookblock( 'jump', 10 );}
+
+});

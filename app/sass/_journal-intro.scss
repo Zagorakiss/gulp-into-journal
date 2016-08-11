@@ -1,5 +1,6 @@
 // Variables /////////////////////////////////////////////////////////////////////////////////////
 
+// Fonts //
 $museo: 'MuseoCyrl-500';
 $helveticaNbold: 'HelveticaNeueBoldCondensed';
 $helveticaNthin: 'HelveticaNeueCyr-Thin';
@@ -15,13 +16,21 @@ $red:   #f26b69;
 $gray:  #bdc3c7; 
 $orange: #ffba00;
 
+// Screens //
+$mobile: 'max-width: 470px';
+$medium: 'min-width: 471px';
+$wide: 'min-width: 1300px';
+
+// Others //
+$border-link: 1px solid rgba(0,0,0,0.4);
+
 
 
 .container_journal-intro {
 	background:transparent url('../img/intro/fon.png') left top no-repeat;
 	background-size: 100% 100%;
 	margin: 0;
-	min-height: 100%;
+	min-height: 100vh;
 	width: 100%;
 	position: relative;
 
@@ -32,12 +41,13 @@ $orange: #ffba00;
 		display: inline-block;
 		text-align: center;
 		padding: 8px 44px;
-		font: normal 16px $museo;
+		font: normal 1.4rem $museo;
 		border: 1px solid $white;
+		@media ($mobile) {position: static; display: block; width: 180px; margin: 20px auto 0 auto;}
 	}
 
 	.button {
-		font: normal 14px $helvetica;
+		font: normal 1.4rem $helvetica;
 		display: inline-block;
 		padding: 10px 15px;
 		width: 130px;
@@ -52,8 +62,10 @@ $orange: #ffba00;
 	.intro {
 		margin: 40px 10px;
 		&__title {
-			font: normal 28px $helveticaNthin;
-			margin-bottom: 40px;
+			display: inline-block;
+			font: normal 2.6rem $helveticaNthin;
+			margin-bottom: 20px;
+			margin-top: 60px;
 			&:after {
 				content: "";
 				display: block;
@@ -68,21 +80,26 @@ $orange: #ffba00;
 		.link {
 			display: inline-block;
 			color: $black;
-			font: bold 16px $helvetica;
+			font: bold 1.4rem $helvetica;
 			text-decoration: none;
-			border-bottom: 2px solid $black;
-			line-height: .7;
+			border-bottom: $border-link;
+			line-height: .8;
 			transition: all .2s ease;
-			&:hover {color: $blue; border-bottom: 2px solid $blue;}
+			&:hover {color: $blue; border-bottom: 1px solid $blue;}
+			@media ($mobile) {display: inline; line-height: 1.2;}
 		}
 		.page-numbers {
 			display: inline-block;
 			color: $black;
-			font: normal 16px $helveticaNthin;
+			font: normal 1.6rem $helveticaNthin;
 			margin-left: 4px;
 		}
-		&__buttons-list {display: block; margin-top: 200px; text-align: center;}
-		&__buttons-item {display: inline-block; margin: 3px;}
+		&__buttons-list {display: block; margin-top: 140px; text-align: center;
+			@media ($mobile) {margin-top: 20px;}
+		}
+		&__buttons-item {display: inline-block; margin: 3px;
+			@media ($mobile) {margin: 5px;}
+		}
 
 	}
 }

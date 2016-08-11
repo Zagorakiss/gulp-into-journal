@@ -19,12 +19,12 @@ $red:   #f26b69;
 $gray:  #bdc3c7; 
 $orange: #ffba00;
 
-// Mixins
+// Mixins //
 @mixin overlay($color) { // Примесь для синего оверлея
   &:before {content: ''; width: 100%; height: 100%; position: absolute; left: 0; top: 0; opacity: 1; background: $color; }
 }
 
-
+// Fonts //
 @font-face {
   font-family: 'MuseoCyrl-500';
   src: url('../fonts/MuseoCyrl-500.eot');
@@ -102,30 +102,30 @@ $orange: #ffba00;
 
 
 // BookBlock ///////////////////////////////////////////////////////////////////////////////////////////////
-.bb-custom-wrapper>nav a {
-	background: $gray;
-}
 .bb-custom-side {
-	// overflow-y: scroll;
-	// border: 1px solid $gray;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .bb-custom-wrapper>nav {
-	width: 90.6%;
+	width: 100%;
 	// width: 100%;
 
 }
 .bb-custom-side {
-	margin-top: 15px;
-	margin-bottom: 15px;
+	// margin-top: 15px;
+	// margin-bottom: 15px;
+	margin-top: 0;
+	margin-bottom: 0;
 	display: block;
-	padding: 10px 20px;
+	padding: 20px 40px;
+	height: auto;
 	// margin-right: -1px;
 	// width: calc('50%-5px');
 // 	align-items: top;
 // 	justify-content: left;
 }
 .bb-custom-wrapper {
-	height: 115%;
+	height: 100%;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -135,24 +135,36 @@ $orange: #ffba00;
 
 
 // Indi Styles ////////////////////////////////////////////////////////////////////////////////////////
+.container_lournal {
+	padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 1440px;
+    // min-width: 930px;
+}
 
 
 // Text Elements /////////////////
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: $helveticaNthin;
-	font-size: 12px;
-	color: $black;
-	line-height: 1;
+html, body {font-size: 72.5%;
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: $helveticaNthin;
+		font-size: 1.2rem;
+		color: $black;
+		line-height: 1;
 
-	p {line-height: 1.5;}
+		p {line-height: 1.5;}
+	}
+	@media (max-width: 720px) {font-size: 62.5%;}
+	@media (min-width: 721px) {font-size: 72.5%;}
+	@media (min-width: 1024px) {font-size: 82.5%;}
 }
 
 h1 {
 	font-family: $helveticaNbold;
-	font-size: 28px;
+	font-size: 2.8rem;
 	display: block;
 	position: relative;
 	margin: 10px 0;
@@ -171,14 +183,14 @@ h1 {
 }
 
 .subtitle {
-	font-size: 22px;
+	font-size: 2.2rem;
 }
 
-.title1_museo {font-family: $museo; font-size: 34px; font-weight: normal; margin-top: 40px; margin-bottom: 20px;}
+.title1_museo {font-family: $museo; font-size: 3.4rem; font-weight: normal; margin-top: 40px; margin-bottom: 20px;}
 
 .title2 {
 	font-family: $helveticaNbold;
-	font-size: 18px;
+	font-size: 1.8rem;
 	display: block;
 	position: relative;
 	&:after {
@@ -192,23 +204,23 @@ h1 {
 }
 
 h2 {
-	&.subtitle2 {font-family: $helvetica; font-size: 20px; z-index: 5; font-weight: 600;}
+	&.subtitle2 {font-family: $helvetica; font-size: 2rem; z-index: 5; font-weight: 600;}
 }
 
 h3, .title3 {
 	font-family: $helvetica;
-	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: bold;
-	line-height: 1.4;
-	margin: 5px 0;
-	&.title_bold {font-family: $helveticaNbold; font-size: 16px; margin-bottom: 0;}
+	line-height: 1.2;
+	margin: 25px 0;
+	&.title_bold {font-family: $helveticaNbold; font-size: 1.6rem; margin-bottom: 5px;}
 }
 
 
 
 .subtitle3 {
 	@extend .title3;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .marginTop25 {
@@ -217,21 +229,56 @@ h3, .title3 {
 
 .text {
 	font-family: $helveticaNthin;
-	font-size: 12px;
+	font-size: 1.2rem;
 	color: $black;
-	line-height: 1.2;
+	line-height: 1.4;
 	p {line-height: 1.5;}
 }
 .links {
-	font: italic 12px "Helvetica";
+	font: italic 1.2rem "Helvetica";
 }
 
 .property {
 	font-family: $helvetica;
-	font-size: 12px;
+	font-size: 1.2rem;
 
 }
 //////////////////////////////
+
+
+// Navigation ///////////////
+.bb-custom-wrapper> {
+	width: 100vw; min-height: 100vh; top: 0; bottom: 0; margin: 0;
+
+	.nav_next {
+		position: fixed; 
+		z-index: 10000;
+		top: 0; 
+		bottom: 0; 
+		right: 0;
+		width: 160px;
+		height: 100vh;
+		margin: 0;
+		background: $gray; 
+		opacity: 0;
+		&:hover {opacity: .6;}
+		transition: all .2s ease;
+	}
+	.nav_prev {
+		@extend .nav_next;
+		left: 0;
+		right: auto;
+	}
+}
+.nav__icon {
+		color: $white;
+		font-size: 80px;
+		position: absolute;
+		top: 40%;
+		left: 40px;
+		right: 40px;
+}
+/////////////////////////////
 
 
 
@@ -246,13 +293,17 @@ h3, .title3 {
 	&2 {width: 100%; margin-top: 15px; margin-bottom: 25px;}
 	&3 {width: 100%; margin-top: 15px; margin-bottom: 0px;}
 	&4 {width: 100%; margin-top: 15px; margin-bottom: 45px;}
-	&5 {margin-bottom: 15px;}
-	&7 {margin-bottom: 15px;}
-	&8 {margin-bottom: 25px;}
+	&5 {margin-bottom: 15px; width: 100%;}
+	&6 {width: 100%;}
+	&7 {margin-bottom: 15px; width: 100%;}
+	&8 {margin-bottom: 25px; width: 100%;}
 	&9 {width: 100%; margin-bottom: 15px;}
-	&10 {margin-bottom: 10px;}
-	&12 {margin-left: 5%; margin-top: 20px;}
+	&10 {margin-bottom: 10px; width: 100%;}
+	&11 {width: 100%;}
+	&12 {margin-bottom: 10px; margin-top: 10px; width: 100%;}
 	&13 {margin-top: 60px;}
+	&14 {height: 100%;}
+	&15 {width: 100%; margin-top: 20px;}
 
 }
 //////////////////////////////
@@ -261,15 +312,15 @@ h3, .title3 {
 
 // Columns (Stakes) ///////////
 .stake {display: inline-block; vertical-align: top;
-	&_small {width: 200px;}
-	&_big {width: 300px;}
+	&_small {width: 35%;;}
+	&_big {width: 60%;}
 	&_1-left {
-		margin-left: 15px;
+		margin-left: 2%;
 	    margin-top: 16px;
 	    margin-right: 0;
 	}
 	&_1-right {
-		margin-left: 24px;
+		margin-left: 8%;
 	    margin-top: 16px;
 	    margin-right: 0;
 	    vertical-align: top;
@@ -279,30 +330,30 @@ h3, .title3 {
 	}
 	&_2-right {
 		margin-top: 25px;
-		margin-left: 30px;
+		margin-left: 4%;
 	}
 	&_3-left {
-		margin-left: 30px;
-		margin-top: 20px;
+		margin-left: 1%;
+		margin-top: 1%;
 		h3 {margin-bottom: 10px;}
 		.text {margin-bottom: 20px;}
 	}
 	&_3-right {
-		margin-top: 20px;
-		margin-left: 30px;
+		margin-top: 1%;
+		margin-left: 3%;
 		h3 {margin-bottom: 10px;}
 		.text {margin-bottom: 20px;}
 	}
 	&_4-left {
-		width: 220px
+		width: 35%;
 	}
 	&_4-right {
 		margin-top: 15px;
-		margin-left: 30px;
+		margin-left: 4%;
 	}
-	&_5-left {}
+	&_5-left {padding-left: 20px;}
 	&_5-right {
-		margin-left: 54px;
+		margin-left: 3%;
 	}
 	&_6-left {}
 	&_6-right {
@@ -319,17 +370,20 @@ h3, .title3 {
 	.title1:after {bottom: -3px;}
 }
 
+.childhood5 {padding: 0;}
+
 .sea-tatoo {
 	position: relative;
-	width: 48%;
-	margin-left: 2%;
+	width: 50%;
+	margin-left: 0;
 	background: transparent url('../img/journal/holdfast.png') 0 0 no-repeat;
+	background-size: 100%;
 	@include overlay(rgba(darken($gray, 50%), 0.5));
 	text-align: center;
 	* {color: $white;}
 	h2 {position: relative;}
-	.text {position: relative; font-size: 14px; font-family: $helvetica; margin-bottom: 20px; line-height: 1.3;
-		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 14px;}
+	.text {position: relative; font-size: 1.4rem; font-family: $helvetica; margin-bottom: 20px; line-height: 1.3;
+		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 1.4rem;}
 	}
 	.stake {text-align: left; width: 44%;}
 	&__intro {text-align: left; width: 90%; display: inline-block; font-style: italic; margin-bottom: 20px;
@@ -339,8 +393,8 @@ h3, .title3 {
 }
 
 .tatoos {
-	.text {font-family: $helveticaNthin; font-size: 16px; margin-bottom: 20px;
-		i {font-size: 16px;}
+	.text {font-family: $helveticaNthin; font-size: 1.6rem; margin-bottom: 20px;
+		i {font-size: 1.6rem;}
 	}
 }
 
@@ -353,16 +407,18 @@ h3, .title3 {
 }
 
 .sea {
-	background:transparent url('../img/journal/sea.png') left top no-repeat;
+	height: 130%;
+	background:transparent url('../img/journal/sea.png') 0 0 no-repeat;
+	background-size: 100% 100%;
 	@include overlay(rgba($gray, 0.1));
-	&__container {width: 40%; text-align: center; margin: 10px 10px 10px 30px;}
+	&__container {width: 40%; text-align: center; margin: 20px 20px 10px 40px;}
 	&__title { display: inline-block; text-align: center;
-		h1 {font-family: $helveticaNthin; font-size: 34px; font-weight: normal;}
-		h2 {font-family: $helveticaNthin; font-size: 30px; font-weight: normal;}
+		h1 {font-family: $helveticaNthin; font-size: 3.4rem; font-weight: normal;}
+		h2 {font-family: $helveticaNthin; font-size: 3rem; font-weight: normal;}
 	}
 	&__text { display: inline-block; margin: 20px 0 0 20px;
 		font-family: $helveticaNthin;
-		font-size: 14px;
+		font-size: 1.4rem;
 		line-height: 1.2;
 		text-align: left;
 	}
@@ -371,7 +427,7 @@ h3, .title3 {
 .brusov {
 	padding: 40px;
 	&__intro {
-		font: italic 12px $helvetica;
+		font: italic 1.2rem $helvetica;
 		width: 55%;
 		margin: 20px 0 20px 0;
 	}
@@ -381,11 +437,11 @@ h3, .title3 {
 		margin-top: 15px;
 	}
 	.text {
-		font-size: 14px;
+		font-size: 1.4rem;
 		text-align: justify;
 	}
 	.link-wrapper {margin-top: 20px;}
-	.link, .link>a {font: italic 14px $helvetica;}
+	.link, .link>a {font: italic 1.4rem $helvetica;}
 	.link_desc {font-style: normal;}
 }
 
@@ -393,6 +449,7 @@ h3, .title3 {
 	position: relative;
 	padding: 20px 50px;
 	background:transparent url('../img/journal/windserf.png') left top no-repeat;
+	background-size: 100% 100%;
 	@include overlay(rgba(lighten($gray, 80%), 0.7));
 	&__intro {
 		position: relative;
@@ -406,7 +463,7 @@ h3, .title3 {
 	}
 	.text {
 		position: relative;
-		font: 14px $helvetica;
+		font: 1.4rem $helvetica;
 		margin-bottom: 15px;
 	}
 	&__outro {
@@ -417,15 +474,19 @@ h3, .title3 {
 }
 
 .tushino {
-	.title2 {font-size: 22px; margin-bottom: 25px;}
+	.title2 {font-size: 2.2rem; margin-bottom: 25px;}
 	&_left {
+		padding: 0;
 		.stake {display: inline-block; width: calc(100% - 200px); padding: 25px 0 0 20px;}
 
 	}
 	&_right {
+		padding: 0;
+		padding-left: 40px;
 		.stake {display: inline-block; width: 40%; padding: 25px 0 0 15px;}
 		.title3 {
 			position: relative;
+			margin-bottom: 5px;
 			&:after {
 				content: "";
 				display: block;
@@ -438,16 +499,17 @@ h3, .title3 {
 		}
 	}
 	&__pic-left {
-		height: 100%;
+		height: 150vh;
 		width: 200px;
 		float: left;
 		display: inline-block;
 		background:transparent url('../img/journal/water.png') left top no-repeat;
+		background-size: 100% 100%;
 		position: relative;
 		@include overlay(rgba(lighten($blue, 80%), 0.7));
 	}
 	&__pic-right {
-		height: 100%;
+		height: 150vh;
 		width: 80px;
 		float: right;
 		display: inline-block;
@@ -456,9 +518,13 @@ h3, .title3 {
 	}
 
 	.text {
-		font: 14px $helveticaNthin;
+		font: 1.4rem $helveticaNthin;
 		margin-bottom: 15px;
 	}
+}
+
+.singlets {
+	background: rgba(darken($blue, 30%), 0.2);
 }
 
 .singlet {
@@ -473,42 +539,47 @@ h3, .title3 {
 	}
 	.text {
 		position: relative;
-		font: 15px $helveticaNthin;
+		font: 1.5rem $helveticaNthin;
 		margin-bottom: 15px;
-		b {font: bold 15px $helveticaNthin;}
+		b {font: bold 1.5rem $helveticaNthin;}
 	}
 }
 
 .singlet2 {
+	@extend .singlet;
 	position: relative;
 	@include overlay(rgba(darken($blue, 30%), 0.2));
-	padding: 10px 0 0 25px;
+	// padding: 0;
+	// height: 130%;
+	background:transparent url('../img/journal/k1.jpg') left top no-repeat;
+	background-size: 100% 130%;
+	.hidden-text {opacity: 0;}
 }
 
 .captain {
 	text-align: center;
 	padding: 20px 50px;
 	h1 {
-		font: bold 25px $helvetica;
+		font: bold 2.5rem $helvetica;
 	}
 	.title2 {
-		font-size: 20px;
+		font-size: 2rem;
 		margin-bottom: 10px;
 		&:after {bottom: -3px;}
 	}
 	&__intro {
 		text-align: left;
-		font: italic 12px $helvetica;
+		font: italic 1.2rem $helvetica;
 		width: 70%;
-		margin: 40px 0 40px 90px;
+		margin: 40px 0 40px 15%;
 	}
 	.stake {
-		width: 35%;
+		width: 40%;
 		text-align: left;
 		margin-left: 20px;
 		&:nth-child(1) {margin-left: 15%;}
 	}
-	.text {font-size: 13px; margin-bottom: 10px;}
+	.text {font-size: 1.3rem; margin-bottom: 10px;}
 
 }
 
@@ -516,46 +587,48 @@ h3, .title3 {
 	padding: 30px 10px;
 	.stake {
 		width: 30%;
-		margin-right: 2%;
+		margin-right: 2.8%;
 	}
 	.text {
-		font-size: 14px;
+		font-size: 1.4rem;
 		margin-bottom: 15px;
 	}
 
 }
 
 .schools {
+	height: 155%;
 	position: relative;
 	background:transparent url('../img/journal/port.png') left top no-repeat;
+	background-size: 100% 100%;
 	padding: 20px 40px;
 	h3 {color: $white; font-weight: normal;}
-	.link, .link>a {color: lighten($blue, 20%); font: italic 10px $helvetica; margin-bottom: 30px;}
+	.link, .link>a {color: lighten($blue, 20%); font: italic 1rem $helvetica; margin-bottom: 30px;}
 }
 
 .self {
 	position: relative;
-	figure {display: inline-block; position: absolute; top: 10px; left: 10px;}
+	figure {display: inline-block; position: absolute; top: 20px; left: 20px;}
 	figcaption {
-		font: normal 10px $helvetica;
+		font: normal 1rem $helvetica;
 		margin: 10px 22px;
 		line-height: 1.5;
-		b {font: bold 10px $helvetica;}
+		b {font: bold 1rem $helvetica;}
 	}
 	&__intro {
 		text-align: left;
-		font: italic 12px $helvetica;
+		font: italic 1.2rem $helvetica;
 		width: 85%;
 	}
-	.title2 {margin-bottom: 90px; font-size: 22px; font-style: normal;} 
-	h3 {position: relative; font-size: 18px;}
-	.subtitle {font-size: 20px;}
+	.title2 {margin-bottom: 90px; font-size: 2.2rem; font-style: normal;} 
+	h3 {position: relative; font-size: 1.8rem;}
+	.subtitle {font-size: 2rem;}
 	.stake {
 		&:nth-child(1) {margin-left: 220px; margin-top: 5px; margin-bottom: 80px;}
-		&:nth-child(2) {width: 40%; margin-right: 50px;}
+		&:nth-child(2) {width: 40%; margin-right: 10%;}
 		&:nth-child(3) {width: 40%; margin-top: 10px;}
 	}
-	.text {font-size: 13px;}
+	.text {font-size: 1.3rem;}
 
 }
 
@@ -564,17 +637,17 @@ h3, .title3 {
 	position: relative;
 	@include overlay(rgba($gray, 0.04));
 	.stake {width: 45%;
-		&:nth-child(2) {margin-left: 20px;}
+		&:nth-child(2) {margin-left: 6%;}
 	}
-	.help-text {font: italic 12px $helvetica; margin-bottom: 40px;}
-	.title3 {position: relative; font-size: 18px;}
-	.subtitle {font-size: 20px;}
+	.help-text {font: italic 1.2rem $helvetica; margin-bottom: 40px;}
+	.title3 {position: relative; font-size: 1.8rem;}
+	.subtitle {font-size: 2rem;}
 	ol {margin-left: 20px;}
 	li {margin: 4px 0; padding-left: 10px;}
-	.text {margin-bottom: 30px; font-size: 13px;}
+	.text {margin-bottom: 30px; font-size: 1.3rem;}
 }
 
 .self3 {
 	@extend .self2;
-	li {font-size: 10px;}
+	li {font-size: 1rem;}
 }

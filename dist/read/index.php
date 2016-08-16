@@ -60,6 +60,7 @@
 	</header>
 
 	<body>
+		<?require($_SERVER["DOCUMENT_ROOT"]."/seo/metrika.php");?>
 		<div class="container container_journal">
 			<div class="bb-custom-wrapper">
 				
@@ -301,7 +302,7 @@
 
 						</div>
 						<div class="bb-custom-side windserf">
-							<h2 class="title2">Виндсерфинг</h2>
+							<h1 class="title1">Виндсерфинг</h1>
 							<div class="windserf__intro">
 								Гуляя в Строгино, не совсем понимаешь где ты. То ли в Москве, то ли на Гаванских островах.
 							</div>
@@ -352,7 +353,7 @@
 										Музей подводной лодки: http://mosparks.ru/museum/about/istoriya-parka/
 									</div>
 								</div>
-								<h2 class="title2 title_bold">Адмирал</h2>
+								<h3 class="title3 title_bold">Адмирал</h3>
 								<div class="text">
 									Настоящий курортный отдых в полном объеме вы найдете в яхт-клубе «Адмирал», который расположен в гавани Клязьминского водохранилища в 7км от Москвы. На территории в 5 гектаров расположены три песчаных пляжа, пять бассейнов, несколько кафе, банный комплекс.
 									Хотите загорать под солнцем? Пожалуйста! Шезлонги, зонтики и полотенце вам предоставят бесплатно.

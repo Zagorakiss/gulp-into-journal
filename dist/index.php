@@ -19,6 +19,7 @@
 	</head>
 
 	<body>
+		<?require($_SERVER["DOCUMENT_ROOT"]."/seo/metrika.php");?>
 		<div class="container container_journal-intro">
 
 			<a href="#" class="journal-logo">
@@ -56,10 +57,10 @@
 
 				<div class="intro__buttons-list">
 					<div class="intro__buttons-item">
-						<a href="read/" class="button">Читать</a>
+						<a href="read/" class="button button_transparent white">Читать</a>
 					</div>
 					<div class="intro__buttons-item">
-						<a href="look/" class="button">Смотреть</a>
+						<a href="look/" class="button button_transparent white">Смотреть</a>
 					</div>
 				</div>
 			</div>

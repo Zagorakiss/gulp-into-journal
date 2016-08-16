@@ -135,7 +135,7 @@ $orange: #ffba00;
 
 
 // Indi Styles ////////////////////////////////////////////////////////////////////////////////////////
-.container_lournal {
+.container_journal {
 	padding-left: 0;
     padding-right: 0;
     width: 100%;
@@ -204,7 +204,7 @@ h1 {
 }
 
 h2 {
-	&.subtitle2 {font-family: $helvetica; font-size: 2rem; z-index: 5; font-weight: 600;}
+	&.subtitle2 {font-family: $helvetica; font-size: 1.6rem; z-index: 5; font-weight: 600;}
 }
 
 h3, .title3 {
@@ -382,8 +382,8 @@ h3, .title3 {
 	text-align: center;
 	* {color: $white;}
 	h2 {position: relative;}
-	.text {position: relative; font-size: 1.4rem; font-family: $helvetica; margin-bottom: 20px; line-height: 1.3;
-		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 1.4rem;}
+	.text {position: relative; font-size: 1.2rem; margin-bottom: 20px; line-height: 1.3;
+		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 1.2rem;}
 	}
 	.stake {text-align: left; width: 44%;}
 	&__intro {text-align: left; width: 90%; display: inline-block; font-style: italic; margin-bottom: 20px;
@@ -393,8 +393,8 @@ h3, .title3 {
 }
 
 .tatoos {
-	.text {font-family: $helveticaNthin; font-size: 1.6rem; margin-bottom: 20px;
-		i {font-size: 1.6rem;}
+	.text {font-family: $helveticaNthin; font-size: 1.2rem; margin-bottom: 20px;
+		i {font-size: 1.2rem;}
 	}
 }
 
@@ -407,9 +407,11 @@ h3, .title3 {
 }
 
 .sea {
-	height: 130%;
+	// height: 130%;
 	background:transparent url('../img/journal/sea.png') 0 0 no-repeat;
-	background-size: 100% 100%;
+	// background-size: 100% 100%;
+	background-position: center;
+	background-size: cover;
 	@include overlay(rgba($gray, 0.1));
 	&__container {width: 40%; text-align: center; margin: 20px 20px 10px 40px;}
 	&__title { display: inline-block; text-align: center;
@@ -425,6 +427,7 @@ h3, .title3 {
 }
 
 .brusov {
+	.title2 {font-size: 2.2rem;}
 	padding: 40px;
 	&__intro {
 		font: italic 1.2rem $helvetica;
@@ -437,7 +440,7 @@ h3, .title3 {
 		margin-top: 15px;
 	}
 	.text {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		text-align: justify;
 	}
 	.link-wrapper {margin-top: 20px;}
@@ -446,6 +449,7 @@ h3, .title3 {
 }
 
 .windserf {
+	.title2 {font-size: 2.2rem;}
 	position: relative;
 	padding: 20px 50px;
 	background:transparent url('../img/journal/windserf.png') left top no-repeat;
@@ -463,7 +467,7 @@ h3, .title3 {
 	}
 	.text {
 		position: relative;
-		font: 1.4rem $helvetica;
+		font-size: 1.2rem;
 		margin-bottom: 15px;
 	}
 	&__outro {
@@ -484,19 +488,19 @@ h3, .title3 {
 		padding: 0;
 		padding-left: 40px;
 		.stake {display: inline-block; width: 40%; padding: 25px 0 0 15px;}
-		.title3 {
-			position: relative;
-			margin-bottom: 5px;
-			&:after {
-				content: "";
-				display: block;
-				position: absolute;
-				border-top: 1px solid $blue;
-				width: 26px;
-				bottom: -4px;
-				margin-bottom: 4px;
-			}	
-		}
+		// .title3 {
+		// 	position: relative;
+		// 	margin-bottom: 5px;
+		// 	&:after {
+		// 		content: "";
+		// 		display: block;
+		// 		position: absolute;
+		// 		border-top: 1px solid $blue;
+		// 		width: 26px;
+		// 		bottom: -4px;
+		// 		margin-bottom: 4px;
+		// 	}	
+		// }
 	}
 	&__pic-left {
 		height: 150vh;
@@ -518,7 +522,6 @@ h3, .title3 {
 	}
 
 	.text {
-		font: 1.4rem $helveticaNthin;
 		margin-bottom: 15px;
 	}
 }
@@ -539,7 +542,6 @@ h3, .title3 {
 	}
 	.text {
 		position: relative;
-		font: 1.5rem $helveticaNthin;
 		margin-bottom: 15px;
 		b {font: bold 1.5rem $helveticaNthin;}
 	}
@@ -579,7 +581,7 @@ h3, .title3 {
 		margin-left: 20px;
 		&:nth-child(1) {margin-left: 15%;}
 	}
-	.text {font-size: 1.3rem; margin-bottom: 10px;}
+	.text {margin-bottom: 10px;}
 
 }
 
@@ -590,7 +592,6 @@ h3, .title3 {
 		margin-right: 2.8%;
 	}
 	.text {
-		font-size: 1.4rem;
 		margin-bottom: 15px;
 	}
 
@@ -644,10 +645,188 @@ h3, .title3 {
 	.subtitle {font-size: 2rem;}
 	ol {margin-left: 20px;}
 	li {margin: 4px 0; padding-left: 10px;}
-	.text {margin-bottom: 30px; font-size: 1.3rem;}
+	.text {margin-bottom: 30px; font-size: 1.2rem;}
 }
 
 .self3 {
 	@extend .self2;
-	li {font-size: 1rem;}
+	// li {font-size: 1rem;}
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Хедер ////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.container_header {padding: 0 150px;}
+
+.header {padding: 40px 0 35px;
+  @media (max-width: 400px) {text-align: center;}
+  &_absolute {position: absolute; z-index: 10; width: 100%; background: linear-gradient(to bottom, #000, transparent);}
+}
+.header__logo {float: left;
+  @media (max-width: 400px) {float: none; display: inline-block;}
+}
+.header__rlink {float: left; margin: 13px 0px 0px 45px;
+  @media (max-width: 400px) {margin: 30px 0px 30px 0px !important; float: none;}
+  @media (max-width: 970px) {width: 100%; margin: 30px 0px !important;}
+}
+.header__menu {float: left; margin: 15px 0px 0px 45px;
+  @media (max-width: 400px) {float: none; margin: 0 !important;}
+  @media (max-width: 970px) {width: 100%; text-align: center; padding: 0; margin: 0 !important;}
+}
+
+/* Ссылки пользователя в шапке (User links) */
+.header__ulinks {float: right; margin: 0;
+  @media (max-width: 400px) {float: none; margin: 30px 0;}
+}
+.ulinks {font: normal 16px $helvetica;}
+.ulinks__list {}
+.ulinks__item {display: inline-block;}
+.ulinks__link {/*border-bottom: 1px solid rgba(0,0,0,0.6);*/ display: inline-block; color: $green; position: relative; cursor: pointer;}
+.ulinks__link_in {border-bottom: 1px solid $green;}
+.ulinks__line {color: $green; display: inline-block; margin: 0 5px;}
+
+.ulinks__list_auth {}
+.ulinks__list_auth .ulinks__item {}
+.ulinks__list_auth .ulinks__link-auth {background: url(/images/sprite.png) -1040px 0px; width: 31px; height: 31px; display: block; position: absolute; top: -8px; left: -2px; cursor: pointer;}
+.ulinks__list_auth .ulinks__link_auth {border-bottom: none; margin-right: 15px;}
+.ulinks__list_auth .ulinks__line {}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Логотип //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.logo {}
+.logo__link {display: block; border-bottom: none; width: 134px; height: 46px; background: url(../img/logo.png) no-repeat 0 0; background-size: contain;}
+
+.logo_journal {}
+.logo_journal .logo__link {background: url(../img/logo-j.png) no-repeat 0 0;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Ссылка "Разместить резюме" ///////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.rlink {font-size: 18px; color: $blue; padding: 12px 15px; border: 1px solid transparent;}
+.rlink:hover {border-color: $blue;}
+.rlink__plus {font: 300 32px/16px $helvetica; vertical-align: top;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Меню /////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+.menu {}
+
+/* Меню
+  В хедере */
+.menu_header {}
+.menu_header .menu__list {}
+.menu_header .menu__item {display: inline-block;
+  // @media (max-width: 400px) {display: block; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
+}
+.menu_header .menu__item + .menu__item {margin-left: 25px;
+  // @media (max-width: 400px) {margin-left: 0; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
+}
+.menu_header .menu__link {color: $gray; border-bottom: 1px solid rgba(152, 152, 152, 0.2)}
+.menu_header .menu__link:hover {border-bottom-color: rgba(152, 152, 152, 1);}
+.menu_header .menu__item_list > .menu__link {position: relative; padding-right: 13px;}
+.menu_header .menu__item_list > .menu__link:after {border: 5px solid transparent; border-top: 5px solid $gray; content: ''; position: absolute; top: 50%; right: 0; margin-top: -3px;}
+.menu_header .menu__item_list > .menu__link:hover:after {}
+
+.menu_header_journal .menu__link {font-size: 18px; padding: 12px 25px 11px; border: 1px solid transparent; display: block;}
+.menu_header_journal .menu__link:hover {border-color: #000; color: #000;}
+.menu_header_journal .menu__item_active .menu__link {border-color: #000; color: #000;}
+.menu_header_journal .menu__item + .menu__item {margin-left: 30px;}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////// Buttons (Кнопки) +Components //////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin button-anim($color) { position: relative; // Примесь для анимации кнопок
+  &:after {content: ''; position: absolute; z-index: 10000; left: -10px; top: -10px; right: -10px; bottom: -10px; width: auto; height: auto; border: 1px solid $color; opacity: 0; border-radius: 2px;}
+  &:hover:after {transition: all .4s linear; left: 0px; top: 0px; right: 0px; bottom: 0px; opacity: 1; border-width: 1px;}
+}
+
+.button {
+
+  // Общие стили:
+  transition: all 0.2s ease; text-align: center; border-radius: 2px; padding: 14px 55px; display: inline-block; font: normal 16px/1 $helvetica; position: relative; cursor: pointer; border: none;
+
+  // Цвет - по умолчанию (зеленый):
+  background-color: $green; &:hover {background-color: $green; @include button-anim($green);}
+  color: $white;
+  
+  // Пример записи в HTML:
+  // <a class="button green hover-blue active-red">Text</a>
+
+  // Default button colors (Цвет кнопок по умолчанию)
+  &.green {background-color: $green; &:hover {background-color: $green; @include button-anim($green);} }
+  &.blue  {background-color: $blue;  &:hover {background-color: $blue; @include button-anim($blue);} }
+  &.red   {background-color: $red;   &:hover {background-color: $red; @include button-anim($red);} }
+  &.gray  {background-color: $gray;  &:hover {background-color: $gray; @include button-anim($gray);} }
+  &.white {background-color: $white; &:hover {background-color: $white; @include button-anim($white);} }
+  &.black {background-color: $black; &:hover {background-color: $black; @include button-anim($black);} }
+  
+  // Hover colors
+  &.hover-blue  {&:hover {background-color: $blue; @include button-anim($blue);} }
+  &.hover-green {&:hover {background-color: $green; @include button-anim($green);} }
+  &.hover-red   {&:hover {background-color: $red; @include button-anim($red);} }
+  &.hover-gray  {&:hover {background-color: $gray; @include button-anim($gray);} }
+  &.hover-white {&:hover {background-color: $white; @include button-anim($white);} }
+  &.hover-black {&:hover {background-color: $black; @include button-anim($black);} }
+
+  // Active colors (Цвета кнопок при клике)
+  &.active-red    {&:active {background-color: $red;} }
+  &.active-green  {&:active {background-color: $green;} }
+  &.active-blue   {&:active {background-color: $blue;} }
+  &.active-gray   {&:active {background-color: $gray;} }
+  &.active-white  {&:active {background-color: $red;} }
+  &.active-black  {&:active {background-color: $black;} }
+
+  // Text colors (Цвета текста)
+  &.text-blue   {color: $blue;}
+  &.text-green  {color: $green;}
+  &.text-red    {color: $red;}
+  &.text-gray   {color: $gray;}
+  &.text-white  {color: $white;}
+  &.text-black  {color: $black;}
+
+  // Прозрачные /////////////////////////////////////////////////////////////////////////////////
+  &_transparent {border: 1px solid;
+
+    // Default button colors (Цвет кнопок по умолчанию)
+    &.green {background: transparent; border-color: $green; color: $green; &:hover {background-color: $green; @include button-anim($green); color: $white;} }
+    &.blue  {background: transparent; border-color: $blue;  color: $blue;  &:hover {background-color: $blue; @include button-anim($blue); color: $white;} }
+    &.red   {background: transparent; border-color: $red;   color: $red;   &:hover {background-color: $red; @include button-anim($red); color: $white;} }
+    &.gray  {background: transparent; border-color: $gray;  color: $gray;  &:hover {background-color: $gray; @include button-anim($gray); color: $white;} }
+    &.white {background: transparent; border-color: $white; color: $white; &:hover {background-color: $white; @include button-anim($white); color: $black;} }
+    &.black {background: transparent; border-color: $black; color: $black; &:hover {background-color: $black; @include button-anim($black); color: $white;} }
+
+    // Hover colors
+    &.hover-blue  {&:hover {background-color: $blue; @include button-anim($blue);   color: $white; border-color: $blue;} }
+    &.hover-green {&:hover {background-color: $green; @include button-anim($green); color: $white; border-color: $green;} }
+    &.hover-red   {&:hover {background-color: $red; @include button-anim($red);     color: $white; border-color: $red;} }
+    &.hover-gray  {&:hover {background-color: $gray; @include button-anim($gray);   color: $white; border-color: $gray;} }
+    &.hover-white {&:hover {background-color: $white; @include button-anim($white); color: $black; border-color: $white;} }
+    &.hover-black {&:hover {background-color: $black; @include button-anim($black); color: $white; border-color: $black;} }
+
+    // Active colors (Цвета кнопок при клике)
+    &.active-red    {&:active {background-color: $red;   color: $white;} }
+    &.active-green  {&:active {background-color: $green; color: $white;} }
+    &.active-blue   {&:active {background-color: $blue;  color: $white;} }
+    &.active-gray   {&:active {background-color: $gray;  color: $white;} }
+    &.active-white  {&:active {background-color: $white; color: $white;} }
+    &.active-black  {&:active {background-color: $black; color: $white;} }
+
+    // Text colors (Цвета текста)
+    &.text-blue   {color: $blue;}
+    &.text-green  {color: $green;}
+    &.text-red    {color: $red;}
+    &.text-gray   {color: $gray;}
+    &.text-white  {color: $white;}
+    &.text-black  {color: $black;}
+  }
+
+}  

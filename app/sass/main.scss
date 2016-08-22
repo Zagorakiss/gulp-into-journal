@@ -141,7 +141,68 @@ $orange: #ffba00;
     width: 100%;
     max-width: 1440px;
     // min-width: 930px;
+    @media (max-width: 1000px) {display: none;}
 }
+.container_mobile-journal {
+	padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+    width: 100%;
+    height: auto;
+    display: none;
+    @media (max-width: 1000px) {display: block;}
+    .stake {width: 100%; margin: 0;}
+    .brusov .stake {width: auto; margin-left: 0;}
+    .windserf .stake {width: auto;}
+    .tushino_left .stake {width: auto; padding: 20px 20px 0 20px;}
+    .tushino_right {padding: 0;}
+    .tushino_right .stake {padding: 0 20px 20px 20px; width: auto;}
+    .tushino .title2 {}
+    .singlet, .singlet2 {padding: 20px;}
+    .singlet .stake {width: auto; margin: 0; padding: initial;}
+    .singlet .title1 {margin-bottom: 30px;}
+    .singlet2 {height: 100vh;}
+    .captain {padding: 20px 0;}
+    .captain2 {padding: 20px 0;}
+    .captain__intro {width: auto; margin: 40px 0 40px 10%;}
+    .captain .stake {width: auto; margin: 0;}
+    .captain .title2 {margin-top: 40px;}
+    .captain2 .stake {width: auto; margin: 0;}
+    .self .stake:nth-child(1) {margin: 5px 0 20px 0;}
+    .self .title2 {margin: 20px 0;}
+    .self figure {position: relative; margin: 20px 0;}
+	.self .stake:nth-child(2) {width: auto; margin: 0;}
+	.self .stake:nth-child(3) {width: auto;}
+	.self2, .self3 {padding: 0;}
+	.self3 {padding-bottom: 40px;}
+	.self2 .stake, .self3 .stake {width: auto; margin: 0;}
+	.self2 .stake:nth-child(2), .self3 .stake:nth-child(2) {margin: 0;}
+	.img13 {display: block; margin: 0 auto 60px;}
+	.sea-tatoo {width: auto;}
+	.sea-tatoo .stake {width: auto;}
+	.tatoos2 .stake:nth-child(2), .tatoos2 .stake:nth-child(3) {margin: 0;}
+	.title1_museo {padding-top: 40px;}
+	.stake_5-left {padding: 0;}
+	.sea__container {width: auto; margin: 20px;}
+	.sea__title {margin-top: 20px;}
+	.sea__text {margin: 20px 0 260px;}
+	.sea:before {display: none;}
+	.stake_5-right {margin-top: 40px;}
+	.img9 {margin-top: 20px;}
+	.img7 { margin-top: 20px;}
+	.img5 {}
+	.img4 {}
+	.stake {padding: 0 20px;}
+	.childhood .title1, .childhood .subtitle, .childhood .img1 {padding: 0 20px;}
+	.windserf {padding: 20px;}
+	.windserf .stake {padding: 0;}
+	.brusov__intro, .windserf__intro, .windserf__outro, .self__intro {width: auto;}
+	.brusov {padding: 20px;}
+	.brusov .stake {padding: 0;}
+
+}
+
+
 
 
 // Text Elements /////////////////
@@ -157,13 +218,16 @@ html, body {font-size: 72.5%;
 
 		p {line-height: 1.5;}
 	}
-	@media (max-width: 720px) {font-size: 62.5%;}
-	@media (min-width: 721px) {font-size: 72.5%;}
-	@media (min-width: 1024px) {font-size: 82.5%;}
+	// @media (max-width: 720px) {font-size: 62.5%;}
+	// @media (min-width: 721px) {font-size: 72.5%;}
+	// @media (min-width: 1024px) {font-size: 82.5%;}
+	@media (max-width: 1000px) {font-size: 82.5%;}
 }
 
 h1 {
-	font-family: $helveticaNbold;
+	// font-family: $helveticaNbold;
+	font-family: $helvetica;
+	font-weight: bold;
 	font-size: 2.8rem;
 	display: block;
 	position: relative;
@@ -189,7 +253,9 @@ h1 {
 .title1_museo {font-family: $museo; font-size: 3.4rem; font-weight: normal; margin-top: 40px; margin-bottom: 20px;}
 
 .title2 {
-	font-family: $helveticaNbold;
+	// font-family: $helveticaNbold;
+	font-family: $helvetica;
+	font-weight	: bold;
 	font-size: 1.8rem;
 	display: block;
 	position: relative;
@@ -213,7 +279,13 @@ h3, .title3 {
 	font-weight: bold;
 	line-height: 1.2;
 	margin: 25px 0;
-	&.title_bold {font-family: $helveticaNbold; font-size: 1.6rem; margin-bottom: 5px;}
+	&.title_bold {
+		// font-family: $helveticaNbold;
+		font-family: $helvetica;
+		font-weight: bold;
+		font-size: 1.6rem; 
+		margin-bottom: 5px;
+	}
 }
 
 
@@ -289,6 +361,7 @@ h3, .title3 {
 		display: inline-block;
 		margin: 10px 20px 10px 0px;
 		float: left;
+		@media (max-width: 1325px) {float: none; display: block;}
 	}
 	&2 {width: 100%; margin-top: 15px; margin-bottom: 25px;}
 	&3 {width: 100%; margin-top: 15px; margin-bottom: 0px;}
@@ -644,7 +717,7 @@ h3, .title3 {
 	.title3 {position: relative; font-size: 1.8rem;}
 	.subtitle {font-size: 2rem;}
 	ol {margin-left: 20px;}
-	li {margin: 4px 0; padding-left: 10px;}
+	li {margin: 4px 0; padding-left: 10px; line-height: 1.2;}
 	.text {margin-bottom: 30px; font-size: 1.2rem;}
 }
 
@@ -656,34 +729,137 @@ h3, .title3 {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// Sidebar //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// SIZES
+$width__sidebar: 80vw;
+
+.sidebar__toggle {
+  position: fixed;
+  z-index: 50000;
+  border: 4px solid $white;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: $width__sidebar + 1vw;
+  margin-top: 1vw;
+  background-color: $green;
+  transform: rotate(0deg);
+  cursor: pointer;
+  transition: .8s;
+  
+  &.is-closed {
+    transform: translateX(0px) rotate(-45deg);  
+  }
+  
+  .sidebar__icon {
+    font-size: 2.5rem;
+    color: $white;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50000;
+  width: $width__sidebar;
+  height: 100vh;
+  background-color: $green;
+  transition: .7s;
+  
+  &.is-closed {
+    transform: translateX(-80vw);
+  }
+
+  &__list {
+  	height: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	padding: 40px;
+  }
+  &__item {
+  	display: block; 
+  	margin: 10px 0; 
+  	
+  	border-radius: 3px; 
+  	border: 1px solid $white;
+	&:hover {color: $green; background-color: $white;
+		.sidebar__link {color: $green;}
+	}
+  }
+  &__link {
+  	font-size: 1.4rem;
+  	color: $white;
+  	display: block;
+  	padding: 10px;
+	height: 100%;
+	width: 100%;
+	@media (max-width: 600px) {font-size: 1rem;}
+  }
+}
+
+///////
+
+.mobile-page {display: none;}
+.container_mobile-journal[data-show="page1"] .mobile-page#mobile-1 { display: block; }
+.container_mobile-journal[data-show="page2"] .mobile-page#mobile-2 { display: block; }
+.container_mobile-journal[data-show="page3"] .mobile-page#mobile-3 { display: block; }
+.container_mobile-journal[data-show="page4"] .mobile-page#mobile-4 { display: block; }
+.container_mobile-journal[data-show="page5"] .mobile-page#mobile-5 { display: block; }
+.container_mobile-journal[data-show="page6"] .mobile-page#mobile-6 { display: block; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Хедер ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-.container_header {padding: 0 150px;}
+.container_header {padding: 0 150px;
+	@media (max-width: 1000px) {padding: 0;}
+}
 
 .header {padding: 40px 0 35px;
-  @media (max-width: 400px) {text-align: center;}
+  @media (max-width: 1000px) {text-align: center;}
   &_absolute {position: absolute; z-index: 10; width: 100%; background: linear-gradient(to bottom, #000, transparent);}
 }
 .header__logo {float: left;
-  @media (max-width: 400px) {float: none; display: inline-block;}
+  @media (max-width: 1000px) {float: none; display: inline-block;}
 }
 .header__rlink {float: left; margin: 13px 0px 0px 45px;
-  @media (max-width: 400px) {margin: 30px 0px 30px 0px !important; float: none;}
-  @media (max-width: 970px) {width: 100%; margin: 30px 0px !important;}
+  @media (max-width: 1000px) {margin: 30px 0px 30px 0px !important; float: none;}
+  // @media (max-width: 970px) {width: 100%; margin: 30px 0px !important;}
 }
-.header__menu {float: left; margin: 15px 0px 0px 45px;
-  @media (max-width: 400px) {float: none; margin: 0 !important;}
-  @media (max-width: 970px) {width: 100%; text-align: center; padding: 0; margin: 0 !important;}
+.header__menu {float: left; margin: 15px 0px 0px 85px;
+  @media (max-width: 1000px) {float: none; margin: 0 !important;}
+  // @media (max-width: 970px) {width: 100%; text-align: center; padding: 0; margin: 0 !important;}
 }
 
 /* Ссылки пользователя в шапке (User links) */
 .header__ulinks {float: right; margin: 0;
-  @media (max-width: 400px) {float: none; margin: 30px 0;}
+  @media (max-width: 1000px) {float: none; margin: 30px 0;}
 }
 .ulinks {font: normal 16px $helvetica;}
 .ulinks__list {}
-.ulinks__item {display: inline-block;}
+.ulinks__item {display: inline-block;
+	.button {padding: 14px;
+		&:hover {color: $white; box-shadow: 0 0 10px $gray;}
+	}
+}
 .ulinks__link {/*border-bottom: 1px solid rgba(0,0,0,0.6);*/ display: inline-block; color: $green; position: relative; cursor: pointer;}
 .ulinks__link_in {border-bottom: 1px solid $green;}
 .ulinks__line {color: $green; display: inline-block; margin: 0 5px;}
@@ -723,10 +899,10 @@ h3, .title3 {
 .menu_header {}
 .menu_header .menu__list {}
 .menu_header .menu__item {display: inline-block;
-  // @media (max-width: 400px) {display: block; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
+  // @media (max-width: 1000px) {display: block; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
 }
 .menu_header .menu__item + .menu__item {margin-left: 25px;
-  // @media (max-width: 400px) {margin-left: 0; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
+  // @media (max-width: 1000px) {margin-left: 0; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
 }
 .menu_header .menu__link {color: $gray; border-bottom: 1px solid rgba(152, 152, 152, 0.2)}
 .menu_header .menu__link:hover {border-bottom-color: rgba(152, 152, 152, 1);}

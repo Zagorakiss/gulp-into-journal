@@ -152,11 +152,11 @@ $orange: #ffba00;
     display: none;
     @media (max-width: 1000px) {display: block;}
     .stake {width: 100%; margin: 0;}
-    .brusov .stake {width: auto; margin-left: 0;}
+    .brusov .stake {width: 100%; margin-left: 0;}
     .windserf .stake {width: auto;}
     .tushino_left .stake {width: auto; padding: 20px 20px 0 20px;}
     .tushino_right {padding: 0;}
-    .tushino_right .stake {padding: 0 20px 20px 20px; width: auto;}
+    .tushino_right .stake {padding: 0 20px 20px 20px; width: 100%;}
     .tushino .title2 {}
     .singlet, .singlet2 {padding: 20px;}
     .singlet .stake {width: auto; margin: 0; padding: initial;}
@@ -278,7 +278,7 @@ h3, .title3 {
 	font-size: 1.4rem;
 	font-weight: bold;
 	line-height: 1.2;
-	margin: 25px 0;
+	margin: 35px 0 20px 0;
 	&.title_bold {
 		// font-family: $helveticaNbold;
 		font-family: $helvetica;
@@ -301,13 +301,14 @@ h3, .title3 {
 
 .text {
 	font-family: $helveticaNthin;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	color: $black;
-	line-height: 1.4;
+	line-height: 1.5;
 	p {line-height: 1.5;}
 }
 .links {
 	font: italic 1.2rem "Helvetica";
+	word-wrap: break-word;
 }
 
 .property {
@@ -449,14 +450,14 @@ h3, .title3 {
 	position: relative;
 	width: 50%;
 	margin-left: 0;
-	background: transparent url('../img/journal/holdfast.png') 0 0 no-repeat;
+	background: transparent url('../img/journal/holdfast.jpg') 0 0 no-repeat;
 	background-size: 100%;
 	@include overlay(rgba(darken($gray, 50%), 0.5));
 	text-align: center;
 	* {color: $white;}
 	h2 {position: relative;}
-	.text {position: relative; font-size: 1.2rem; margin-bottom: 20px; line-height: 1.3;
-		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 1.2rem;}
+	.text {position: relative; font-size: 1.4rem; margin-bottom: 20px; line-height: 1.5;
+		&__intro {font-style: italic; font-family: $helveticaNthin; font-size: 1.4rem;}
 	}
 	.stake {text-align: left; width: 44%;}
 	&__intro {text-align: left; width: 90%; display: inline-block; font-style: italic; margin-bottom: 20px;
@@ -466,8 +467,8 @@ h3, .title3 {
 }
 
 .tatoos {
-	.text {font-family: $helveticaNthin; font-size: 1.2rem; margin-bottom: 20px;
-		i {font-size: 1.2rem;}
+	.text {font-family: $helveticaNthin; font-size: 1.4rem; margin-bottom: 20px;
+		i {font-size: 1.4rem;}
 	}
 }
 
@@ -481,20 +482,20 @@ h3, .title3 {
 
 .sea {
 	// height: 130%;
-	background:transparent url('../img/journal/sea.png') 0 0 no-repeat;
+	background:transparent url('../img/journal/sea.jpg') 0 0 no-repeat;
 	// background-size: 100% 100%;
 	background-position: center;
 	background-size: cover;
 	@include overlay(rgba($gray, 0.1));
-	&__container {width: 40%; text-align: center; margin: 20px 20px 10px 40px;}
+	&__container {width: 50%; text-align: center; margin: 20px 20px 10px 40px;}
 	&__title { display: inline-block; text-align: center;
 		h1 {font-family: $helveticaNthin; font-size: 3.4rem; font-weight: normal;}
 		h2 {font-family: $helveticaNthin; font-size: 3rem; font-weight: normal;}
 	}
 	&__text { display: inline-block; margin: 20px 0 0 20px;
 		font-family: $helveticaNthin;
-		font-size: 1.4rem;
-		line-height: 1.2;
+		font-size: 1.6rem;
+		line-height: 1.5;
 		text-align: left;
 	}
 }
@@ -513,11 +514,11 @@ h3, .title3 {
 		margin-top: 15px;
 	}
 	.text {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		text-align: justify;
 	}
 	.link-wrapper {margin-top: 20px;}
-	.link, .link>a {font: italic 1.4rem $helvetica;}
+	.link, .link>a {font: italic 1.4rem $helvetica; word-wrap: break-word;}
 	.link_desc {font-style: normal;}
 }
 
@@ -525,7 +526,7 @@ h3, .title3 {
 	.title2 {font-size: 2.2rem;}
 	position: relative;
 	padding: 20px 50px;
-	background:transparent url('../img/journal/windserf.png') left top no-repeat;
+	background:transparent url('../img/journal/windserf.jpg') left top no-repeat;
 	background-size: 100% 100%;
 	@include overlay(rgba(lighten($gray, 80%), 0.7));
 	&__intro {
@@ -540,7 +541,7 @@ h3, .title3 {
 	}
 	.text {
 		position: relative;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		margin-bottom: 15px;
 	}
 	&__outro {
@@ -580,7 +581,7 @@ h3, .title3 {
 		width: 200px;
 		float: left;
 		display: inline-block;
-		background:transparent url('../img/journal/water.png') left top no-repeat;
+		background:transparent url('../img/journal/water.jpg') left top no-repeat;
 		background-size: 100% 100%;
 		position: relative;
 		@include overlay(rgba(lighten($blue, 80%), 0.7));
@@ -673,7 +674,7 @@ h3, .title3 {
 .schools {
 	height: 155%;
 	position: relative;
-	background:transparent url('../img/journal/port.png') left top no-repeat;
+	background:transparent url('../img/journal/port.jpg') left top no-repeat;
 	background-size: 100% 100%;
 	padding: 20px 40px;
 	h3 {color: $white; font-weight: normal;}
@@ -691,10 +692,11 @@ h3, .title3 {
 	}
 	&__intro {
 		text-align: left;
-		font: italic 1.2rem $helvetica;
+		font: italic 1.4rem $helvetica;
 		width: 85%;
+		line-height: 1.5;
 	}
-	.title2 {margin-bottom: 90px; font-size: 2.2rem; font-style: normal;} 
+	.title2 {margin-bottom: 50px; font-size: 2.2rem; font-style: normal;} 
 	h3 {position: relative; font-size: 1.8rem;}
 	.subtitle {font-size: 2rem;}
 	.stake {
@@ -702,7 +704,7 @@ h3, .title3 {
 		&:nth-child(2) {width: 40%; margin-right: 10%;}
 		&:nth-child(3) {width: 40%; margin-top: 10px;}
 	}
-	.text {font-size: 1.3rem;}
+	.text {font-size: 1.4rem;}
 
 }
 
@@ -717,8 +719,8 @@ h3, .title3 {
 	.title3 {position: relative; font-size: 1.8rem;}
 	.subtitle {font-size: 2rem;}
 	ol {margin-left: 20px;}
-	li {margin: 4px 0; padding-left: 10px; line-height: 1.2;}
-	.text {margin-bottom: 30px; font-size: 1.2rem;}
+	li {margin: 4px 0; padding-left: 10px; line-height: 1.5; font-size: 1.4rem;}
+	.text {margin-bottom: 30px; font-size: 1.4rem;}
 }
 
 .self3 {
@@ -802,8 +804,9 @@ $width__sidebar: 80vw;
   }
 }
 
-///////
 
+
+// Page separation ///////////////////////////////////////////////////////////////////
 .mobile-page {display: none;}
 .container_mobile-journal[data-show="page1"] .mobile-page#mobile-1 { display: block; }
 .container_mobile-journal[data-show="page2"] .mobile-page#mobile-2 { display: block; }
@@ -811,6 +814,22 @@ $width__sidebar: 80vw;
 .container_mobile-journal[data-show="page4"] .mobile-page#mobile-4 { display: block; }
 .container_mobile-journal[data-show="page5"] .mobile-page#mobile-5 { display: block; }
 .container_mobile-journal[data-show="page6"] .mobile-page#mobile-6 { display: block; }
+
+
+
+
+// Prev and Next mobile links ////////////////////////////////////////////////////////
+.mobile-nav {
+	margin: 40px 10px 0 10px;
+	&__left {height: 40vw; width: 40vw; float: left;}
+	&__right {height: 40vw; width: 40vw; float: right;}
+	&__link {display: block; width: 100%; height: 100%; background: $green; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+		&:hover {background: $blue;
+			.mobile-nav__icon {transform: scale(1.1);}
+		}
+	}
+	&__icon {color: $white; font-size: 100px; margin-bottom: 5px;}
+}
 
 
 
@@ -904,7 +923,7 @@ $width__sidebar: 80vw;
 .menu_header .menu__item + .menu__item {margin-left: 25px;
   // @media (max-width: 1000px) {margin-left: 0; margin-bottom: 10px;} // Сережа Громков: закомментировал, чтобы выводились в одну строку
 }
-.menu_header .menu__link {color: $gray; border-bottom: 1px solid rgba(152, 152, 152, 0.2)}
+.menu_header .menu__link {color: $gray; border-bottom: 1px solid rgba(152, 152, 152, 0.2); font-size: 1.4rem;}
 .menu_header .menu__link:hover {border-bottom-color: rgba(152, 152, 152, 1);}
 .menu_header .menu__item_list > .menu__link {position: relative; padding-right: 13px;}
 .menu_header .menu__item_list > .menu__link:after {border: 5px solid transparent; border-top: 5px solid $gray; content: ''; position: absolute; top: 50%; right: 0; margin-top: -3px;}

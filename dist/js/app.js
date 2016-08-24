@@ -13,27 +13,27 @@ var Page = (function() {
 			speed : 1000,
 			shadowSides : 0.8,
 			shadowFlip : 0.4,
-			onEndFlip: function(old, page, isLimit ) {
-				page = page + 1;
+			// onEndFlip: function(old, page, isLimit ) {
+			// 	page = page + 1;
 
-				var pageUrl = '/nastroenie-more';
-				var arPageNumbers = {
-					1: '/mechta-detstva/',
-					2: '/mechta-detstva/#2',
-					3: '/morskaya-tatoo-istoriya/',
-					4: '/morskaya-tatoo-istoriya/#2',
-					5: '/gorod/',
-					6: '/gorod/#2',
-					7: '/gorod/#3',
-					8: '/telnashka/',
-					9: '/kapitan-sudna/',
-					10: '/v-samostoyatelnom-plavanii/',
-					11: '/v-samostoyatelnom-plavanii/#2'
-				};
+			// 	var pageUrl = '/nastroenie-more';
+			// 	var arPageNumbers = {
+			// 		1: '/mechta-detstva/',
+			// 		2: '/mechta-detstva/#2',
+			// 		3: '/morskaya-tatoo-istoriya/',
+			// 		4: '/morskaya-tatoo-istoriya/#2',
+			// 		5: '/gorod/',
+			// 		6: '/gorod/#2',
+			// 		7: '/gorod/#3',
+			// 		8: '/telnashka/',
+			// 		9: '/kapitan-sudna/',
+			// 		10: '/v-samostoyatelnom-plavanii/',
+			// 		11: '/v-samostoyatelnom-plavanii/#2'
+			// 	};
 				
-				history.replaceState('', '', pageUrl + arPageNumbers[page]); 
-				return false;
-			}
+			// 	history.replaceState('', '', pageUrl + arPageNumbers[page]); 
+			// 	return false;
+			// }
 		} );
 		initEvents();
 	},
@@ -136,13 +136,14 @@ $(document).ready(function(){
 	  sidebar.classList.toggle('is-closed');
 	});
 
-	linkSidebar.on('click', function() {
-		var pageToShow = $(this).attr('data-link');
-		journalContainer.attr('data-show', pageToShow);
-		journalContainer.animate({"scrollTop":0},"slow");
-		toggleBtnSidebar.classList.toggle('is-closed');
-		sidebar.classList.toggle('is-closed');
-	});
+	// linkSidebar.on('click', function(e) {
+	// 	e.preventDefault();
+	// 	var pageToShow = $(this).attr('data-link');
+	// 	journalContainer.attr('data-show', pageToShow);
+	// 	journalContainer.animate({"scrollTop":0},"slow");
+	// 	toggleBtnSidebar.classList.toggle('is-closed');
+	// 	sidebar.classList.toggle('is-closed');
+	// });
 
 });
 // Sidebar END ///////////////////////////////////////////////////////////////////////////////////

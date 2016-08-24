@@ -23,6 +23,7 @@ $wide: 'min-width: 1300px';
 
 // Others //
 $border-link: 1px solid rgba(0,0,0,0.4);
+$border-link-light: 1px solid rgba(0,0,0,0.2);
 
 
 
@@ -83,16 +84,17 @@ $border-link: 1px solid rgba(0,0,0,0.4);
 			font: bold 1.4rem $helvetica;
 			text-decoration: none;
 			border-bottom: $border-link;
-			line-height: .8;
+			line-height: 1;
 			transition: all .2s ease;
 			&:hover {color: $blue; border-bottom: 1px solid $blue;}
-			@media ($mobile) {display: inline; line-height: 1.2;}
+			@media ($mobile) {display: inline; line-height: 1.5; border-bottom: $border-link-light;}
 		}
 		.page-numbers {
 			display: inline-block;
 			color: $black;
 			font: normal 1.6rem $helveticaNthin;
 			margin-left: 4px;
+			@media ($mobile) {font: normal 1.4rem $helveticaNthin;}
 		}
 		&__buttons-list {display: block; margin-top: 140px; text-align: center;
 			@media ($mobile) {margin-top: 20px;}

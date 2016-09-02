@@ -127,12 +127,13 @@ Page.init();
 // Sidebar ///////////////////////////////////////////////////////////////////////////////////////
 $(document).ready(function(){
 	var toggleBtnSidebar = document.querySelector('.sidebar__toggle');
+	var toggleIconSidebar = document.querySelector('.sidebar__icon');
 	var sidebar = document.querySelector('.sidebar');
 	var linkSidebar = $('.sidebar__link');
 	var journalContainer = $('.container_mobile-journal');
 
 	toggleBtnSidebar.addEventListener('click', function() {
-	  toggleBtnSidebar.classList.toggle('is-closed');
+	  toggleIconSidebar.classList.toggle('is-closed');
 	  sidebar.classList.toggle('is-closed');
 	});
 

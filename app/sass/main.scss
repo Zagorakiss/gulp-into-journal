@@ -256,7 +256,9 @@ h1 {
 	// font-family: $helveticaNbold;
 	font-family: $helvetica;
 	font-weight	: bold;
-	font-size: 1.8rem;
+	font-size: 2.2rem;
+	margin-bottom: 25px;
+	margin-top: 30px;
 	display: block;
 	position: relative;
 	&:after {
@@ -302,6 +304,7 @@ h3, .title3 {
 .text {
 	font-family: $helveticaNthin;
 	font-size: 1.4rem;
+	margin-bottom: 15px;
 	color: $black;
 	line-height: 1.5;
 	p {line-height: 1.5;}
@@ -555,7 +558,7 @@ h3, .title3 {
 	.title2 {font-size: 2.2rem; margin-bottom: 25px;}
 	&_left {
 		padding: 0;
-		.stake {display: inline-block; width: calc(100% - 200px); padding: 25px 0 0 20px;}
+		.stake {display: inline-block; width: calc(100% - 200px); padding: 0px 0 0 20px;}
 
 	}
 	&_right {
@@ -601,7 +604,7 @@ h3, .title3 {
 }
 
 .singlets {
-	background: rgba(darken($blue, 30%), 0.2);
+	// background: rgba(darken($blue, 30%), 0.2);
 }
 
 .singlet {
@@ -740,25 +743,50 @@ $width__sidebar: 80vw;
 .sidebar__toggle {
   position: fixed;
   z-index: 50000;
-  border: 4px solid $white;
+  // border: 4px solid $white;
+  border: 0;
   outline: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  // border-radius: 50%;
   margin-left: $width__sidebar + 1vw;
   margin-top: 1vw;
-  background-color: $green;
+  background-color: $white;
   transform: rotate(0deg);
   cursor: pointer;
   transition: .8s;
-  
-  &.is-closed {
-    transform: translateX(0px) rotate(-45deg);  
+  .sidebar__angle {
+  	border: 2px solid $green;
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    transition: all .2s ease;
+    &_lt {left: 0; top: 0; border-right: none; border-bottom: none;}
+    &_rt {right: 0; top: 0; border-left: none; border-bottom: none;}
+    &_lb {left: 0; bottom: 0; border-right: none; border-top: none;}
+    &_rb {right: 0; bottom: 0; border-top: none; border-left: none;}
+  }
+  &:hover {
+  	.sidebar__angle {
+	    &_lt {width: 90%; height: 20%;}
+	    &_rt {width: 10%; height: 80%;}
+	    &_lb {width: 10%; height: 80%;}
+	    &_rb {width: 90%; height: 20%;}
+	  }
   }
   
+  // &.is-closed {
+  //   transform: translateX(0px) rotate(-45deg);  
+  // }
+  
   .sidebar__icon {
+  	display: inline-block;
     font-size: 2.5rem;
-    color: $white;
+    color: $green;
+    transition: .8s;
+    &.is-closed {
+    	transform: translateX(0px) rotate(-45deg);  
+    }
   }
 }
 
@@ -821,12 +849,15 @@ $width__sidebar: 80vw;
 // Prev and Next mobile links ////////////////////////////////////////////////////////
 .mobile-nav {
 	margin: 40px 10px 0 10px;
-	&__left {height: 40vw; width: 40vw; float: left;}
-	&__right {height: 40vw; width: 40vw; float: right;}
-	&__link {display: block; width: 100%; height: 100%; background: $green; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;
-		&:hover {background: $blue;
-			.mobile-nav__icon {transform: scale(1.1);}
-		}
+	&__left {width: 40vw; float: left;}
+	&__right {width: 40vw; float: right;}
+	// &__link {display: block; width: 100%; height: 100%; background: $green; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+	// 	&:hover {background: $blue;
+	// 		.mobile-nav__icon {transform: scale(1.1);}
+	// 	}
+	// }
+	&__link {font-size: 1.2rem; line-height: 1.2; color: $green; border-bottom: 1px solid rgba($green, 0.4);
+		&:hover {color: $green; border-bottom: 1px solid rgba($green, 0.8);}
 	}
 	&__icon {color: $white; font-size: 100px; margin-bottom: 5px;}
 }
